@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Acumin-Pro-Light.woff";
+  src: url("Acumin-Pro-Light.woff.woff2") format("woff2"),
+       url("Acumin-Pro-Light.woff.woff") format("woff"),
+       url("Acumin-Pro-Light.woff.ttf") format("truetype"),
+       url("Acumin-Pro-Light.woff.eot") format("embedded-opentype"),
+       url("Acumin-Pro-Light.woff.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

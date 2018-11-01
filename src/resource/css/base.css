@@ -1,0 +1,62 @@
+
+/*设置通用样式*/
+body{
+	font-size:14px;
+	color:#363636;
+    margin:0;
+    padding:0;
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color: #fff;
+}
+div,img{
+    vertical-align:middle;
+}
+.clear:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.lf { float:left;}
+.rt { float:right;}
+
+div.main,header,footer{
+
+    width:100%;
+    margin:0 auto;
+}
+div,li,p,span{
+	box-sizing:border-box;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+
+/*font*/
+/* @font-face {
+    font-family: 'iconfont';
+    src: url('myicon/iconfont.eot');
+    src: url('myicon/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('myicon/iconfont.woff') format('woff'),
+    url('myicon/iconfont.ttf') format('truetype'),
+    url('myicon/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+} */
+

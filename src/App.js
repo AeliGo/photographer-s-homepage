@@ -85,7 +85,7 @@ export default class Router4Transition extends Component {
             />
 
             <Route
-              path="/detail/:album"
+              path="/detail/:numInAll"
               children={props => {
                 return <Detail {...props} changeColorFun={this.changeFontColor}/>
               }}

@@ -20,12 +20,26 @@
         img{
             max-height: 100%;
             width: auto;
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+        }
+        .imgFadeIn{
+            opacity: 1 !important;
         }
     }
     .imgBox::after{
         content: '';
         display: block;
         padding-top: 56.25%;
+    } 
+    .prev,.next{
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top:140px;
+    }
+    .next{
+        right: 0;
     }
     .albumName{
         display: inline-block;

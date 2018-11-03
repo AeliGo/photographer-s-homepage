@@ -8,30 +8,40 @@ export default class IndexGuide extends Component {
         super(props);
         this.state = {
             curImgIndex:1,
+            titlesArr:[]
         };
     }
 
-    // UNSAFE_componentWillMount() {
-    //     this.props.changeColorFun(true);
-    // }
+    UNSAFE_componentWillMount() {
+        // this.props.changeColorFun(true);
+        this.init();
+    }
 
+    init=()=>{
+        let count=1,added=0;
+        let titlesArr = config.data.map((item,index)=>{
 
-   
+            count=count+added;    
+            added=item.children.length;
+
+            return {
+                id:item.id,
+                name:item.name,
+                count:count,
+                childPicUrl:item.children.length>0?item.children[0].url:''
+            }
+        });
+
+        this.setState({
+            titlesArr
+        });
+    }
+
 
     render() {
     
-    let titlesArr = config.data.map((item)=>{
-        return {
-            id:item.id,
-            name:item.name
-        }
-    });
-    let photoList=config.data.map((item)=>{
-        return {...item.children[0],
-                id:item.children[0].parentId+"_"+item.children[0].name,
-            }
-    })
-
+    const { titlesArr}=this.state;
+        console.log(titlesArr)
     return (
         <div className={styles.container}>
             <div className={styles.titles}>
@@ -42,6 +52,9 @@ export default class IndexGuide extends Component {
                                 onMouseEnter={()=>{
                                     this.setState({curImgIndex:index})
                                 }}
+                                onClick={()=>{
+                                    this.props.history.push(`/detail/${item.count}`);
+                                }}
                                 >
                             {item.name + ' / '}
                         </p>
@@ -50,9 +63,9 @@ export default class IndexGuide extends Component {
             </div>
             <div className={styles.photos}>
                 {
-                    photoList.map((item,index)=>{
+                    titlesArr.map((item,index)=>{
                         return <div key={item.id} 
-                        className={(this.state.curImgIndex===index)?styles.fadein:''}><img src={item.url} alt="" key={item.id} /></div>
+                        className={(this.state.curImgIndex===index)?styles.fadein:''}><img src={item.childPicUrl} alt="" key={item.id} /></div>
                     })
                 }
             </div>

@@ -77,7 +77,7 @@ export default class DetailPage extends Component{
     }
 
     componentDidMount(){
-        document.addEventListener('keyup',this.keyUpFun);
+        document.addEventListener('keyup',this.keyUpFun); //绑定键盘事件
     }
 
     componentWillUnmount(){

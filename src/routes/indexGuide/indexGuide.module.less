@@ -50,3 +50,31 @@
 opacity: 1 !important;
 transition: opacity 1s ease-in-out;
 }
+
+
+@media screen and(min-width:600px)and(max-width:1028px) {
+    .container{
+        padding-left: 15%;
+        padding-top: 220px;
+        .titles{
+            margin-right: 4%;
+        }
+        .photos{
+            min-width: 290px;
+        }
+    }
+}
+@media screen and(max-width:600px) {
+    .container{
+        padding-left: 15%;
+        .titles{
+            width: 100%;
+            p{
+                padding: 10px;
+            }
+        }
+        .photos{
+            display: none;
+        }
+    }
+}

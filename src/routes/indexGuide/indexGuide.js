@@ -41,7 +41,6 @@ export default class IndexGuide extends Component {
     render() {
     
     const { titlesArr}=this.state;
-        console.log(titlesArr)
     return (
         <div className={styles.container}>
             <div className={styles.titles}>

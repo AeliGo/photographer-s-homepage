@@ -12,16 +12,19 @@
         margin: auto;
         box-sizing: border-box;
         position: relative;
-        // text-align: center;
+       
         top:50%;
         transform: translate(0, -50%);
-        display: flex;
-        justify-content: center;
         img{
             max-height: 100%;
             width: auto;
             opacity: 0;
             transition: opacity 500ms ease-in-out;
+
+            position: absolute;
+            top:50%; 
+            left:50%;
+            transform: translate(-50%,-50%);
         }
         .imgFadeIn{
             opacity: 1 !important;
@@ -64,5 +67,27 @@
         right: 0;
         bottom: 0;
         padding: 40px;
+    }
+}
+
+
+@media screen and(min-width:600px)and(max-width:1028px) {
+    .imgBox{
+        img{
+            width: 100% !important;
+        }
+    }
+    .albumName{
+        left:25px !important;
+    }
+}
+@media screen and(max-width:600px) {
+    .imgBox{
+        img{
+            width: 100% !important;
+        }
+    }
+    .albumName{
+        display: none !important;
     }
 }

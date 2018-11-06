@@ -30,8 +30,6 @@ export default class Thumbnails extends Component{
       }
     });
 
-    console.log(urlList)
-
     return (
       
         <div className={styles.wrapper}>

@@ -7,7 +7,7 @@
     font-weight: 400;
     color: #5c5a5a;
     .imgBox{
-        width: 80%;
+        width: 70%;
         height: 70%;
         margin: auto;
         box-sizing: border-box;
@@ -72,22 +72,28 @@
 
 
 @media screen and(min-width:600px)and(max-width:1028px) {
-    .imgBox{
-        img{
-            width: 100% !important;
+    .wrapper{
+        .imgBox{
+            width: 52%;
+            img{
+                width: 100%;
+            }
         }
-    }
-    .albumName{
-        left:25px !important;
+        .albumName{
+            left:25px;
+        }
     }
 }
 @media screen and(max-width:600px) {
-    .imgBox{
-        img{
-            width: 100% !important;
+    .wrapper{
+        .imgBox{
+            width: 77%;
+            img{
+                width: 100%;
+            }
         }
-    }
-    .albumName{
-        display: none !important;
+        .albumName{
+            display: none;
+        }
     }
 }

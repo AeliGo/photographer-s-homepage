@@ -5,26 +5,32 @@ import styles from './infomation.module.less'
 
 export default class Infomation extends Component{
 
-
-  // UNSAFE_componentWillMount() {
-  //   this.props.changeColorFun(true);
-  // }
-
   render(){
     return (
         <div className={styles.wrapper}>
-        
-          <div>
-            <div>infomation</div>
-            <div>infomation</div>
-            <div>infomation</div>
-            <div>infomation</div>
-            <div>infomation</div>
-            <div>infomation</div>
-            <div>infomation</div>
+          <div className={styles.textContainer}>
+            <div className={styles.mb15}>
+              <p>
+              Yingda Xu(徐英达) is a Chinese film photographer and graphic designer currently based in Guangzhou, China.
+              </p>
+              <p>
+              In 2015, he graduated from Swinburne University in Melbourne, Australia with a bachelor of Visual Communication Design specialising in Photography.
+              </p>
+            </div>
+            <p className={styles.mb15}>
+            For business inquiries please contact me via email.
+            </p>
+            <div className={styles.mb55}>
+              <p><b>Email:</b>  yingdaxu@outlook.com</p>
+              <p><b>Wechat:</b>  Shawnxu92</p>
+              <p><b>Instagram:</b>  whatisthisstyle</p>
+            </div>
+            <div>
+              <p><b>Press:</b></p>
+              <p>Shortlisted - Palm Photo Prize</p>
+              <p>Aint-bad, Ayemag ,Pample-Mousse, Altair Zine, </p>
+            </div>
           </div>
-          <img src="http://images.xhbtr.com/v2/uploads/images/236812/xhbtr_23f2c9b2-1474-4da7-a22c-9345dc623c00_w1000.jpg" alt="" />
-          
       </div> 
     )
   }

@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-around;
     font-size: 15px;
+    overflow: auto;
     .textContainer{
         width: 60%;
         padding: 20px;
@@ -31,7 +32,10 @@
 }
 @media screen and(max-width:600px) {
     .wrapper{
+        font-size: 12px;
+        padding-top: 100px;
         .textContainer{
+            overflow: auto;
             width: 88%;
             padding: 7px;
         }

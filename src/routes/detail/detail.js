@@ -88,7 +88,7 @@ export default class DetailPage extends Component{
         const t=this;
         let numNow=t.getCurPicIndex();
         const infoItemObj=t.state.urlList[numNow-1];
-
+        console.log(infoItemObj)
     return (
         <div className={styles.wrapper}>
             <div className={styles.imgBox}>

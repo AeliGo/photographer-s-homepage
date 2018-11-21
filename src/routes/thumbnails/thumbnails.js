@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import styles from './thumbnails.module.less';
 import {Link} from 'react-router-dom'
 // import {config} from '../../config/config';
-const config = window.config
 
 
 

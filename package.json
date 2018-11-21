@@ -70,7 +70,6 @@
     "globals":{
       "config":true
     }
-
   },
   "browserslist": [
     ">0.2%",

@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import styles from "./indexGuide.module.less";
 // import {config} from '../../config/config';
-import 'animate.css/animate.min.css'
+import 'animate.css/animate.min.css';
+const config = window.config
 
 export default class IndexGuide extends Component {
     constructor(props){
@@ -17,6 +18,7 @@ export default class IndexGuide extends Component {
         this.init();
     }
 
+    
     init=()=>{
         let count=1,added=0;
         let titlesArr = config.data.map((item,index)=>{

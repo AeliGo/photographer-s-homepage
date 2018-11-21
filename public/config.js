@@ -1,4 +1,4 @@
-const config = {
+var config = {
     data:[
         {
             id:'album_001',
@@ -7,19 +7,19 @@ const config = {
                 {
                     id:'photo_001',
                     name:'photo_001',
-                    url:'http://www.aeligo.com/resource/album1_img1.jpg',
+                    url:'http://www.aeligo.com/resources/album1_img1.jpg',
                     parentId:'album_001',
                 },
                 {
                     id:'photo_002',
                     name:'photo_002',
-                    url:'http://www.aeligo.com/resource/images/album1_img2.jpg',
+                    url:'http://www.aeligo.com/resources/album1_img2.jpg',
                     parentId:'album_001',
                 },
                 {
                     id:'photo_003',
                     name:'photo_003',
-                    url:'http://www.aeligo.com/resource/images/album1_img3.jpg',
+                    url:'http://www.aeligo.com/resources/album1_img3.jpg',
                     parentId:'album_001',
                 }
             ]
@@ -31,31 +31,31 @@ const config = {
                 {
                     id:'photo_001',
                     name:'photo_001',
-                    url:'http://www.aeligo.com/resource/images/album2_img1.jpg',
+                    url:'http://www.aeligo.com/resources/album2_img1.jpg',
                     parentId:'album_002'
                 },
                 {
                     id:'photo_002',
                     name:'photo_002',
-                    url:'http://www.aeligo.com/resource/images/album2_img2.jpg',
+                    url:'http://www.aeligo.com/resources/album2_img2.jpg',
                     parentId:'album_002'
                 },
                 {
                     id:'photo_003',
                     name:'photo_003',
-                    url:'http://www.aeligo.com/resource/images/album2_img3.jpg',
+                    url:'http://www.aeligo.com/resources/album2_img3.jpg',
                     parentId:'album_002'
                 },
                 {
                     id:'photo_004',
                     name:'photo_004',
-                    url:'http://www.aeligo.com/resource/images/album2_img4.jpg',
+                    url:'http://www.aeligo.com/resources/album2_img4.jpg',
                     parentId:'album_002'
                 },
                 {
                     id:'photo_005',
                     name:'photo_005',
-                    url:'http://www.aeligo.com/resource/images/album2_img5.jpg',
+                    url:'http://www.aeligo.com/resources/album2_img5.jpg',
                     parentId:'album_002'
                 },
             ]
@@ -67,25 +67,25 @@ const config = {
                 {
                     id:'photo_001',
                     name:'photo_001',
-                    url:'http://www.aeligo.com/resource/images/album3_img1.jpg',
+                    url:'http://www.aeligo.com/resources/album3_img1.jpg',
                     parentId:'album_003'
                 },
                 {
                     id:'photo_002',
                     name:'photo_002',
-                    url:'http://www.aeligo.com/resource/images/album3_img2.jpg',
+                    url:'http://www.aeligo.com/resources/album3_img2.jpg',
                     parentId:'album_003'
                 },
                 {
                     id:'photo_003',
                     name:'photo_003',
-                    url:'http://www.aeligo.com/resource/images/album3_img3.jpg',
+                    url:'http://www.aeligo.com/resources/album3_img3.jpg',
                     parentId:'album_003'
                 },
                 {
                     id:'photo_004',
                     name:'photo_004',
-                    url:'http://www.aeligo.com/resource/images/album3_img4.jpg',
+                    url:'http://www.aeligo.com/resources/album3_img4.jpg',
                     parentId:'album_003'
                 }
             ]
@@ -97,31 +97,31 @@ const config = {
                 {
                     id:'photo_001',
                     name:'photo_001',
-                    url:'http://www.aeligo.com/resource/images/album4_img1.jpg',
+                    url:'http://www.aeligo.com/resources/album4_img1.jpg',
                     parentId:'album_004'
                 },
                 {
                     id:'photo_002',
                     name:'photo_002',
-                    url:'http://www.aeligo.com/resource/images/album4_img2.jpg',
+                    url:'http://www.aeligo.com/resources/album4_img2.jpg',
                     parentId:'album_004'
                 },
                 {
                     id:'photo_003',
                     name:'photo_003',
-                    url:'http://www.aeligo.com/resource/images/album4_img3.jpg',
+                    url:'http://www.aeligo.com/resources/album4_img3.jpg',
                     parentId:'album_004'
                 },
                 {
                     id:'photo_004',
                     name:'photo_004',
-                    url:'http://www.aeligo.com/resource/images/album4_img4.jpg',
+                    url:'http://www.aeligo.com/resources/album4_img4.jpg',
                     parentId:'album_004'
                 },
                 {
                     id:'photo_005',
                     name:'photo_005',
-                    url:'http://www.aeligo.com/resource/images/album4_img5.jpg',
+                    url:'http://www.aeligo.com/resources/album4_img5.jpg',
                     parentId:'album_004'
                 },
             ]
@@ -133,29 +133,29 @@ const config = {
                 {
                     id:'photo_001',
                     name:'photo_001',
-                    url:'http://www.aeligo.com/resource/images/album5_img1.jpg',
+                    url:'http://www.aeligo.com/resources/album5_img1.jpg',
                     parentId:'album_005'
                 },
                 {
                     id:'photo_002',
                     name:'photo_002',
-                    url:'http://www.aeligo.com/resource/images/album5_img2.jpg',
+                    url:'http://www.aeligo.com/resources/album5_img2.jpg',
                     parentId:'album_005'
                 },
                 {
                     id:'photo_003',
                     name:'photo_003',
-                    url:'http://www.aeligo.com/resource/images/album5_img3.jpg',
+                    url:'http://www.aeligo.com/resources/album5_img3.jpg',
                     parentId:'album_005'
                 },
                 {
                     id:'photo_004',
                     name:'photo_004',
-                    url:'http://www.aeligo.com/resource/images/album5_img4.jpg',
+                    url:'http://www.aeligo.com/resources/album5_img4.jpg',
                     parentId:'album_005'
                 },
                
             ]
         }
     ]
-};
+}

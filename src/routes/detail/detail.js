@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import styles from './detail.module.less';
-import {config} from '../../config/config';
-
+// import {config} from '../../config/config';
 
 export default class DetailPage extends Component{
 

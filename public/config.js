@@ -1,4 +1,4 @@
-export const config = {
+const config = {
     data:[
         {
             id:'album_001',
@@ -158,4 +158,4 @@ export const config = {
             ]
         }
     ]
-}
+};

@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import styles from "./indexGuide.module.less";
-import {config} from '../../config/config';
+// import {config} from '../../config/config';
 import 'animate.css/animate.min.css'
 
 export default class IndexGuide extends Component {

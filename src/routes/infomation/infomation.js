@@ -28,14 +28,11 @@ export default class Infomation extends Component{
             <div>
               <p><b>Press:</b></p>
               <p>Shortlisted - Palm Photo Prize</p>
-              <p>Aint-bad, Ayemag ,Pample-Mousse, Altair Zine, </p>
+              <p>Aint-bad, Ayemag, Pample-Mousse, Altair Zine, </p>
             </div>
           </div>
       </div> 
     )
   }
 }
-
-Infomation.propTypes = {
-};
 

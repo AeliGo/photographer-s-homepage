@@ -27,8 +27,7 @@ export default class Router4Transition extends Component {
     }
     
     render() {
-
-        const {darkFontColor}= this.state
+        const {darkFontColor}= this.state;
 
     return (
       <Router>

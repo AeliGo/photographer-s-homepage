@@ -26,6 +26,26 @@
             left:50%;
             transform: translate(-50%,-50%);
         }
+        .statements{
+            position: absolute;
+            z-index: 999;
+            height: 101%;
+            width: 100%;
+            top:-5px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            animation: shrink 1.5s infinite alternate;
+            overflow: hidden;
+            .stateWrapper{
+                width:600px;
+                position: absolute;
+                left: 275px;
+                letter-spacing: 0.15em;
+                font-weight: 400;
+                color: #5c5a5a;
+            }
+        }
         .imgFadeIn{
             opacity: 1 !important;
         }
@@ -67,6 +87,17 @@
         right: 0;
         bottom: 0;
         padding: 40px;
+    }
+}
+
+@keyframes shrink {
+    0% {
+        width: 100%;
+    }
+
+
+    100% {
+        width: 0%;
     }
 }
 

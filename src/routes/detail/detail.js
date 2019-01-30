@@ -98,6 +98,12 @@ export default class DetailPage extends Component{
                     t.setState({isShowed:true})
                 }}
                 />
+                <div className={styles.statements}>
+                    <div className={styles.stateWrapper}>
+                        asddd ddddddd ddddddddd dddddx zccccc ccccccc cccc ccc
+                        asddd ddddddd ddddddddd dddddx zccccc ccccccc cccc ccc
+                    </div>
+                </div>
             </div>
                 <span 
                 className={styles.prev} 

@@ -10,13 +10,10 @@ export default class Thumbnails extends Component{
     this.props.changeColorFun(true);
   }
 
-
   render(){
-
-
-
     let urlList=[];
     let count=0;
+    console.log(config)
     config.data.forEach((parent)=>{
       if(parent&&parent.children){
         parent.children.forEach((child)=>{

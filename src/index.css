@@ -15,6 +15,15 @@ html, body, :global(#root) {
   font-style: normal;
 }
 
+@font-face {font-family: "iconfont";
+  src: url('./resource/icon/iconfont.eot?t=1550239216290'); /* IE9 */
+  src: url('./resource/icon/iconfont.eot?t=1550239216290#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAARYAAsAAAAACxQAAAQKAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDegqIJIZnATYCJAMkCxQABCAFhG0Hdht5CciOwziG3ISH8hQ7iCpXlqVuiQdiZQIZgFhr86wRfkR4CC+m59z/3GZOpl1IWCSZJu3/bTexY2KNnsn8cfjjP32vZ9++yxyzOakLu6gLKKAxNnaRtbFNIQTsWfS7v0k8RG35r4fzIYBHCaoibQ+3J6eh4ZsJIFOjgHFay46ewQmOyRrZVyNbMXGMDcZrYEv+8PIztcUBA1PBL9Rz/N7jVt+p78upOBszVMXEx3kB6yBQQFVAg2RG/atRZb4qCi+4mWYgHEkcDKzv1Hf2d953Bb+Pvi+XzUIbYWELDOZeISkQaUSOH5xD/+EZaEwsbBALTR8AM7PgwHdKyWuDBR19gw0rAoMHKwYMBWBFw1AQIpjwfSSCBd+X64ENgJvukwMUACkP8h7cWDbXWgInKKRoAs0vgU5l0BbDq8umiy35f9P3o2/7ffL9gI+/619rF7rSQoqf7IffDA4++qjfJ58M+Pjj/h9+2C9FcsX7TwuUZwQkDF8lhozyzsSnvWTmbO65JSutH/enSjdI8KsN8WT/yczxQniHj8cnyvnsO5F3qqj4x07lngz0AU2fmM/zPe55CSNzUoSRe8r3aXknQA5jclSbah83MPbeztwtooKjd3Pv+Ql14F7encJGQl8mvh2pkT+dSmmGe5lKDaoryn6mo0gD91kUqTGfxKEvFld+vl4d/fLLo5pGmTPUUd0zZ3fE/zqnlHbshkiuxM3rmUJ/1PyjUKZwugyg4s91yZL6cyGBNFHXHYlLF2/o//+XoLmhS6HWu8LHV69SpnQZsgVql65NOP5HKY6QByvX/fPs0PBE+PRpuD8cqqTF7CfCnmqJsfWENL8CDUftrzeN2jhdr19qSeFWj7HUgjCGx9Vy/qZG7CG8swH/JWTvqgeq1d/8bRhxMKw5YtT0X8fXAHy68bs/0CMba1QM/1UDZMWfWkGcpEMVd7jaH73qjQAuzfi7Zg3AE2HIIpzD18ca85OzIDgthQUGNsVB4VAWoTFVwcSnLlg4tACPKnQ42CdkNiKiXaAyaxgIac6BQZJ7oEjzBqExX4FJAX4Fi7Qo8Ogv4TF9yssko02JrEYPRg8wyaXcl67aKFrvGDQpK5uqnPvGsopSUKt6zW7piDmWR+wwpw0Wc2sfxpeUQXt2MUxTgpklxejWk4l1/VnWqDF+7I4mYyjjDNpQgjBqEA9gNAPAJFyIHD+du8bo3f8dJKAhhVHODBuIv0FKKqKlA7WoTk0C4qjPScM+pescWgIWzNWyPsB4q5nIANprXiQVeQKYOb5WDOJSM2HihuyHJTW06cZT9ZPrjdm7XgR48Ft1xRAlWkyxxBZHXPFwpmPA6qhFaWbaVFq1yRHLQ0ZKLjWMahOtOueOaZybvgUAAAA=') format('woff2'),
+  url('./resource/icon/iconfont.woff?t=1550239216290') format('woff'),
+  url('./resource/icon/iconfont.ttf?t=1550239216290') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('./resource/icon/iconfont.svg?t=1550239216290#iconfont') format('svg'); /* iOS 4.1- */
+}
+
 /* 改变滚动条样式 */
 ::-webkit-scrollbar-thumb {
   background-color: #e6e6e6;

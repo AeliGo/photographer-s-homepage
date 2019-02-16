@@ -30,12 +30,12 @@
             position: absolute;
             z-index: 999;
             height: 101%;
-            width: 100%;
+            width: 0%;
             top:-5px;
             background-color: #fff;
             display: flex;
             align-items: center;
-            animation: shrink 1.5s infinite alternate;
+
             overflow: hidden;
             .stateWrapper{
                 width:600px;
@@ -43,8 +43,17 @@
                 left: 275px;
                 letter-spacing: 0.15em;
                 font-weight: 400;
+                font-size: 17px;
                 color: #5c5a5a;
             }
+        }
+
+        .statementUnfold{
+            width: 101%;
+            animation: unfold 1.5s;
+        }
+        .statementFold{
+            animation: fold 1.5s;
         }
         .imgFadeIn{
             opacity: 1 !important;
@@ -75,6 +84,10 @@
         -moz-transform:translate(-50%,-50%) rotate(-90deg); /* Firefox */
         -webkit-transform:translate(-50%,-50%) rotate(-90deg); /* Safari 和 Chrome */
         -o-transform:translate(-50%,-50%) rotate(-90deg); /* Opera */
+        .iconPlus,.iconMinus{
+            margin-left: 20px;
+            cursor: pointer;
+        }
     }
     .leftBottom{
         position: absolute;
@@ -90,7 +103,18 @@
     }
 }
 
-@keyframes shrink {
+@keyframes unfold {
+    0% {
+        width: 0%;
+    }
+
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fold {
     0% {
         width: 100%;
     }
@@ -131,3 +155,11 @@
         }
     }
 }
+//图标
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }

@@ -96,7 +96,7 @@ export default class DetailPage extends Component{
         const t=this;
         let numNow=t.getCurPicIndex();
         const infoItemObj=t.state.urlList[numNow-1];
-        let leftPosition = 150; //默认居中的位置  绝对定位的left属性
+        let leftPosition = 250; //默认居中的位置  绝对定位的left属性
         if(this.refDom){ //计算出居中的位置，文字固定宽度600
             const { clientWidth } = this.refDom;
             leftPosition = (clientWidth - 600) / 2;
@@ -125,7 +125,7 @@ export default class DetailPage extends Component{
                             infoItemObj &&
                             Array.isArray(t.state.statementListObj[infoItemObj.parentName]) &&
                             t.state.statementListObj[infoItemObj.parentName].map((item,index)=>{
-                                return <p key={index}>{item}</p> //渲染statement的多个段落
+                                return <p className={styles.stateParah} key={index}>{item}</p> //渲染statement的多个段落
                             })
                         }
                     </div>

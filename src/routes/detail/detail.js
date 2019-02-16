@@ -14,6 +14,7 @@ export default class DetailPage extends Component{
             isShowed:true,
             isFolded:'init',
         };
+        this.imgBoxRef= ref =>{ this.refDom = ref } //获取dom
     }
 
     init=()=>{
@@ -63,9 +64,9 @@ export default class DetailPage extends Component{
     keyUpFun=(e)=>{
         const t=this;
         switch(e.keyCode){
-            case 37: t.jumpToDetail('left')
+            case 37: t.state.isFolded!=='false'&&t.jumpToDetail('left')//只有statement未打开的时候才能换图片
             break
-            case 39: t.jumpToDetail('right')
+            case 39: t.state.isFolded!=='false'&&t.jumpToDetail('right')
             break
             default:
             break
@@ -95,9 +96,17 @@ export default class DetailPage extends Component{
         const t=this;
         let numNow=t.getCurPicIndex();
         const infoItemObj=t.state.urlList[numNow-1];
+        let leftPosition = 150; //默认居中的位置  绝对定位的left属性
+        if(this.refDom){ //计算出居中的位置，文字固定宽度600
+            const { clientWidth } = this.refDom;
+            leftPosition = (clientWidth - 600) / 2;
+        }
+        
     return (
         <div className={styles.wrapper}>
-            <div className={styles.imgBox}>
+            <div 
+            ref={this.imgBoxRef}
+            className={styles.imgBox}>
                 <img 
                 className={t.state.isShowed?styles.imgFadeIn:''}
                 src={infoItemObj?infoItemObj.url:''} alt=""
@@ -109,12 +118,14 @@ export default class DetailPage extends Component{
                     [styles.statementUnfold]: t.state.isFolded==='false',
                     [styles.statementFold]: t.state.isFolded==='true',
                 })} >
-                    <div className={styles.stateWrapper}>
+                    <div 
+                    style={{'left':leftPosition+'px'}} //动态改变 绝对定位的left属性的值
+                    className={styles.stateWrapper}>
                         {
                             infoItemObj &&
                             Array.isArray(t.state.statementListObj[infoItemObj.parentName]) &&
                             t.state.statementListObj[infoItemObj.parentName].map((item,index)=>{
-                                return <p key={index}>{item}</p>
+                                return <p key={index}>{item}</p> //渲染statement的多个段落
                             })
                         }
                     </div>
@@ -123,7 +134,7 @@ export default class DetailPage extends Component{
                 <span 
                 className={styles.prev} 
                 onClick={()=>{
-                    t.state.isFolded!=='false'&&t.jumpToDetail('left');
+                    t.state.isFolded!=='false'&&t.jumpToDetail('left'); //只有statement未打开的时候才能点击
                 }}></span>
                 <span 
                 className={styles.next}
@@ -152,7 +163,6 @@ export default class DetailPage extends Component{
                 </span>
             }
             </span>
-            
             <span className={styles.leftBottom}>{infoItemObj?infoItemObj.picName:''}</span>
             <span className={styles.rightBottom}>{infoItemObj?infoItemObj.numInAllStr:''}</span>
         <div style={{display:'none'}}>
@@ -166,7 +176,4 @@ export default class DetailPage extends Component{
     )
   }
 }
-
-DetailPage.propTypes = {
-};
 

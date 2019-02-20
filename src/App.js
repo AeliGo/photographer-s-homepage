@@ -38,7 +38,7 @@ export default class Router4Transition extends Component {
                     className={classNames(styles.navLeft, {
                     [styles.darkColor]: darkFontColor,
                 })} >
-                    <p className={styles.indexName}>Yingda Xu</p>
+                    <p className={styles.indexName}><NavLink to="/">Yingda Xu</NavLink></p>
                     <ul className={styles.navLeftDropdown}>
                         <li><NavLink to="/enterIndex" exact>Index</NavLink></li>
                         <li><NavLink to="/thunmnails">Thumbnails</NavLink></li>

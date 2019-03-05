@@ -34,6 +34,7 @@ html, body, :global(#root) {
   height: 5px;
 }
 
+
 @media screen and(max-width:600px) {
   html, body, :global(#root) {
     font-size: 12px;

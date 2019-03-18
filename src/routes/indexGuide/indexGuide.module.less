@@ -23,16 +23,19 @@
             color: #ddd;
         }
     }
+    .titles:hover ~ div{
+        opacity: 1;
+    }
     .showPhotoRandom{
         width: 45%;
         height: 75%;
         position: relative;
         box-sizing: border-box;
-        // opacity: 0;
+        opacity: 0;
+        // transition: opacity 1s ease-in-out;
         img{
             max-height: 100%;
             max-width: 100%;
-            opacity: 0;
         }
     }
 }

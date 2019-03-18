@@ -68,16 +68,9 @@ export default class IndexGuide extends Component {
                 }
             </div>
             <div className={styles.showPhotoRandom} style={{left:(Math.random()*randomW),top:(Math.random()*randomH)}} key={this.state.curImgIndex}>
-                <img className={styles.fadein} src={titlesArr[this.state.curImgIndex].childPicUrl} alt="" />
+                <img src={titlesArr[this.state.curImgIndex].childPicUrl} alt="" />
             </div>
-            {/* <div className={styles.photos}>
-                {
-                    titlesArr.map((item,index)=>{
-                        return <div key={item.id} 
-                        className={(this.state.curImgIndex===index)?styles.fadein:''}><img src={item.childPicUrl} alt="" key={item.id} /></div>
-                    })
-                }
-            </div> */}
+
         </div> 
         )
     }

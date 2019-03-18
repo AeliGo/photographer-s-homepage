@@ -7,8 +7,8 @@
     font-weight: 400;
     color: #5c5a5a;
     .imgBox{
-        width: 70%;
-        height: 70%;
+        width: 47%;
+        height: 71%;
         margin: auto;
         box-sizing: border-box;
         position: relative;
@@ -17,6 +17,7 @@
         transform: translate(0, -50%);
         img{
             max-height: 100%;
+            max-width: 100%;
             width: auto;
             opacity: 0;
             transition: opacity 500ms ease-in-out;
@@ -32,6 +33,7 @@
             height: 101%;
             width: 0%;
             top:-3px;
+            left:-2px;
             background-color: #fff;
             display: flex;
             align-items: center;
@@ -44,7 +46,7 @@
                 letter-spacing: 0.15em;
                 text-align: justify;
                 font-weight: 400;
-                font-size: 15px;
+                // font-size: 15px;
                 color: #5c5a5a;
                 .stateParah{
                     margin-bottom: 7px;
@@ -72,7 +74,7 @@
         width: 50%;
         height: 100%;
         position: absolute;
-        top:140px;
+        top:70px;
     }
     .next{
         right: 0;
@@ -82,7 +84,7 @@
         position: absolute;
         left:45px;
         top:50%;
-        font-size: 15.3px;
+        // font-size: 15.3px;
         line-height: 15.3px;
 
         transform:translate(-50%,-50%) rotate(-90deg);
@@ -100,14 +102,14 @@
         left: 0;
         bottom: 0;
         padding: 40px;
-        font-size: 15.3px;
+        // font-size: 15.3px;
     }
     .rightBottom{
         position: absolute;
         right: 0;
         bottom: 0;
         padding: 40px;
-        font-size: 15.3px;
+        // font-size: 15.3px;
     }
 }
 
@@ -133,8 +135,15 @@
     }
 }
 
+@media screen and(min-width:980px) {
+    .wrapper{
+        .imgBox{
+            min-width: 620px;
+        }
+    }
+}
 
-@media screen and(min-width:600px)and(max-width:1028px) {
+@media screen and(min-width:600px)and(max-width:980px) {
     .wrapper{
         .imgBox{
             width: 56%;

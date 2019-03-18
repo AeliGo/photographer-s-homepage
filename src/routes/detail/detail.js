@@ -13,6 +13,7 @@ export default class DetailPage extends Component{
             statementListObj:undefined,
             isShowed:true,
             isFolded:'init',
+            throttle:true,//statement点击节流
         };
         this.imgBoxRef= ref =>{ this.refDom = ref } //获取dom
     }
@@ -149,13 +150,23 @@ export default class DetailPage extends Component{
                             (t.state.isFolded==='init'|| t.state.isFolded==='true')?<span 
                                                 className={styles.iconfont + ' ' + styles.iconPlus}
                                                 onClick={()=>{
-                                                    t.setState({isFolded:'false'})
+                                                    if(t.state.throttle){
+                                                        t.setState({isFolded:'false',throttle:false})
+                                                        setTimeout(()=>{
+                                                            t.setState({throttle:true})
+                                                        },800)
+                                                    }
                                                 }}
                                             >&#xe603;</span>
                                             :<span 
                                                 className={styles.iconfont + ' ' + styles.iconMinus}
                                                 onClick={()=>{
-                                                    t.setState({isFolded:'true'})
+                                                    if(t.state.throttle){
+                                                        t.setState({isFolded:'true',throttle:false})
+                                                        setTimeout(()=>{
+                                                            t.setState({throttle:true})
+                                                        },800)
+                                                    }
                                                 }}
                                             >&#xe606;</span>
                         }

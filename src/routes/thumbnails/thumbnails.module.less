@@ -1,56 +1,79 @@
 .wrapper{
     width: 100%;
     height: 100%;
-    padding-top: 170px;
+    padding-top: 100px;
     display: flex;
     justify-content: space-around;
     overflow: auto;
     .container{
-        width: 80%;
+        width: 95%;
+        margin-left: 120px;
         overflow: auto;
         .item{
-        display: block;
-        float: left;
-        width: 17.5%;
-        margin: 3.75%;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-        transform: translateZ(0);
-        transition: opacity 350ms ease-in-out;
-        cursor: pointer;
+            display: block;
+            float: left;
+            // width: 100px;
+            margin: 10px;
+   
+            transform: translateZ(0);
+            transition: opacity 350ms ease-in-out;
+            cursor: pointer;
         }
         .item::after{
-        content: '';
-        width: 100%;
-        padding-top: 100%;
-        display: block;
+            content: '';
+            width: 100%;
+            padding-top: 100%;
+            display: block;
         }
         .item:hover{
-        opacity: .6;
+            opacity: .6;
         }
     }
+}
+
+@media screen and(min-width:1028px) {
+    .wrapper{
+        .container{
+            .item{
+                height: 110px;
+                img{
+                    height: 100px;
+                }
+            }
+        }
+    } 
 }
 
 @media screen and(min-width:600px)and(max-width:1028px) {
     .wrapper{
         .container{
-            width: 89%;
+            width: 95%;
             .item{
-                width: 25.4%;
-                margin: 3.75%;
+                height: 110px;
+                margin: 5px;
+                img{
+                    height: 100px;
+                }
             }
         }
     } 
 }
 @media screen and(max-width:600px) {
     .wrapper{
-        padding-top: 113px;
+        padding-top: 60px;
         .container{
             width: 90%;
+            margin-left: 1px;
             .item{
-                width: 88%;
-                margin: 5.75%;
+                width: 90%;
+                height: 350px;
+                margin: 4.75%;
+                line-height: 320px;
+                text-align: center;
+                img{
+                    max-height: 100%;
+                    max-width: 100%;
+                }
             }
         }
     }

@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import styles from './thumbnails.module.less';
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 // import {config} from '../../config/config';
 
 
@@ -32,9 +32,15 @@ export default class Thumbnails extends Component{
           <div className={styles.container}>
           {
             urlList.map((item,index)=>{
-              return <Link key={index} className={styles.item}  style={{backgroundImage:'url('+item.url+')'}} to={{
-                pathname:`/detail/${item.numInAll}`,
-              }}   />
+              return <NavLink key={index} 
+                        className={styles.item}  
+                        // style={{backgroundImage:'url('+item.url+')'}} 
+                        to={{
+                          pathname:`/detail/${item.numInAll}`,
+                        }}   
+                      >
+                        <img src={item.url} alt="" />
+                      </NavLink>
             })
           }
           </div>   

@@ -10,6 +10,7 @@ export default class IndexGuide extends Component {
             curImgIndex:1,
             titlesArr:[]
         };
+        this.imgContainerRef= ref =>{ this.refDom = ref } //获取dom
     }
 
     UNSAFE_componentWillMount() {
@@ -42,8 +43,13 @@ export default class IndexGuide extends Component {
     render() {
     
     const { titlesArr}=this.state;
+    let containerW=this.refDom&&this.refDom.offsetWidth;
+    let containerH=this.refDom&&this.refDom.offsetHeight;
+    let randomW=containerW?containerW*(1-0.45):800;
+    let randomH=containerH?containerH*(1-0.75):100;
+
     return (
-        <div className={styles.container}>
+        <div className={styles.container} ref={this.imgContainerRef}>
             <div className={styles.titles}>
                 {
                     titlesArr.map((item,index)=>{
@@ -61,14 +67,17 @@ export default class IndexGuide extends Component {
                     })
                 }
             </div>
-            <div className={styles.photos}>
+            <div className={styles.showPhotoRandom} style={{left:(Math.random()*randomW),top:(Math.random()*randomH)}} key={this.state.curImgIndex}>
+                <img className={styles.fadein} src={titlesArr[this.state.curImgIndex].childPicUrl} alt="" />
+            </div>
+            {/* <div className={styles.photos}>
                 {
                     titlesArr.map((item,index)=>{
                         return <div key={item.id} 
                         className={(this.state.curImgIndex===index)?styles.fadein:''}><img src={item.childPicUrl} alt="" key={item.id} /></div>
                     })
                 }
-            </div>
+            </div> */}
         </div> 
         )
     }

@@ -142,7 +142,7 @@ export default class DetailPage extends Component{
                 onClick={()=>{
                     t.state.isFolded!=='false'&&t.jumpToDetail('right');
                 }}></span>
-            <span className={styles.albumName}>{
+            {/* <span className={styles.albumName}>{
                 infoItemObj&&<span>
                     <span>{infoItemObj.parentName}</span>
                     <span>
@@ -173,8 +173,40 @@ export default class DetailPage extends Component{
                     </span>
                 </span>
             }
+            </span> */}
+            {/* <span className={styles.leftBottom}>{infoItemObj?infoItemObj.picName:''}</span> */}
+            <span className={styles.leftBottom}>{
+                infoItemObj&&<span>
+                    <span>{infoItemObj.parentName}</span>
+                    <span>
+                        {
+                            (t.state.isFolded==='init'|| t.state.isFolded==='true')?<span 
+                                                className={styles.iconfont + ' ' + styles.iconPlus}
+                                                onClick={()=>{
+                                                    if(t.state.throttle){
+                                                        t.setState({isFolded:'false',throttle:false})
+                                                        setTimeout(()=>{
+                                                            t.setState({throttle:true})
+                                                        },1000)
+                                                    }
+                                                }}
+                                            >&#xe604;</span>
+                                            :<span 
+                                                className={styles.iconfont + ' ' + styles.iconMinus}
+                                                onClick={()=>{
+                                                    if(t.state.throttle){
+                                                        t.setState({isFolded:'true',throttle:false})
+                                                        setTimeout(()=>{
+                                                            t.setState({throttle:true})
+                                                        },1000)
+                                                    }
+                                                }}
+                                            >&#xe605;</span>
+                        }
+                    </span>
+                </span>
+            }
             </span>
-            <span className={styles.leftBottom}>{infoItemObj?infoItemObj.picName:''}</span>
             <span className={styles.rightBottom}>{infoItemObj?infoItemObj.numInAllStr:''}</span>
         <div style={{display:'none'}}>
             {

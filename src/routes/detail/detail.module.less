@@ -150,22 +150,29 @@
 @media screen and(min-width:600px)and(max-width:980px) {
     .wrapper{
         .imgBox{
-            width: 56%;
+            width: 61%;
             img{
-                width: 100%;
+                max-height: 100%;
+                max-width: 100%;
             }
         }
         .albumName{
             left:25px;
+        }
+        .leftBottom{
+            .iconPlus,.iconMinus{
+                display: none;
+            }
         }
     }
 }
 @media screen and(max-width:600px) {
     .wrapper{
         .imgBox{
-            width: 68%;
+            width: 84%;
             img{
-                width: 100%;
+                max-height: 100%;
+                max-width: 100%;
             }
         }
         .albumName{
@@ -173,6 +180,11 @@
         }
         .leftBottom,.rightBottom{
             padding: 20px;
+        }
+        .leftBottom{
+            .iconPlus,.iconMinus{
+                display: none;
+            }
         }
     }
 }

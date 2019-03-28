@@ -43,13 +43,13 @@ export default class Router4Transition extends Component {
                     </div>
                     <div className={styles.navLeftDropdown}>
                       <span><NavLink to="/enterIndex" exact>Index</NavLink></span>
-                      <span><NavLink to="/thunmnails">Thumbnails</NavLink></span>
+                      <span><NavLink to="/thumbnails">Thumbnails</NavLink></span>
                       <span><NavLink to="/infomation">Info</NavLink></span>
                     </div>
                     
                     {/* <ul className={styles.navLeftDropdown}>
                         <li><NavLink to="/enterIndex" exact>Index</NavLink></li>
-                        <li><NavLink to="/thunmnails">Thumbnails</NavLink></li>
+                        <li><NavLink to="/thumbnails">Thumbnails</NavLink></li>
                         <li><NavLink to="/infomation">Info</NavLink></li>
                     </ul> */}
                 </div>
@@ -85,7 +85,7 @@ export default class Router4Transition extends Component {
               }}
             />
             <Route
-              path="/thunmnails"
+              path="/thumbnails"
               exact
               children={props => {
                 return <Thumb {...props} changeColorFun={this.changeFontColor}/>

@@ -1,345 +1,219 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-    <meta name="theme-color" content="#000000">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
-    <meta name="renderer" content="webkit" />
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="stylesheet" href="./css/base.css" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-      
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Xu Yingda</title>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!-- <script src="./config.js"></script>  -->
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="shortcut icon" href="/favicon.ico"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta name="theme-color" content="#000000"><meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/><meta name="renderer" content="webkit"/><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="./css/base.css"/><title>Xu Yingda</title><link href="/static/css/1.6a8bd1b9.chunk.css" rel="stylesheet"><link href="/static/css/main.841f4d9b.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div>
+ <!-- 以下是必填项  -->
+ <script>
+    var config = {
+        data:[
+          // {
+          //     id:'album_001',     //每个相册独一无二的id
+          //     name:'Fang Ren for Wrong Space',  //相册名称
+          //     statement:[   //注意书写格式,如需分段
+          //         'paragraph 1',
+          //         'paragraph 2',
+          //         'paragraph 2',
+          //     ],
+          //     children:[ //相册下的每一张图片
+          //         {
+          //             id:'photo_001', //图片独一无二的id
+          //             name:'photo_001', //图片名称
+          //             url:'http://www.aeligo.com/resources/album1_img1.jpg', //图片地址
+          //             parentId:'album_001', //属于哪个相册，填写相册的id
+          //         },
+          //         {
+          //             id:'photo_002',
+          //             name:'photo_002',
+          //             url:'http://www.aeligo.com/resources/album1_img2.jpg',
+          //             parentId:'album_001',
+          //         },
+          //         {
+          //             id:'photo_003',
+          //             name:'photo_003',
+          //             url:'http://www.aeligo.com/resources/album1_img3.jpg',
+          //             parentId:'album_001',
+          //         }
+          //     ]
+          // },
+          {
+              id:'album_001',
+              name:'Fang Ren for Wrong Space',
+              statement:[
+                  'Fang Ren for Wrong Space Fang Ren for Wrong Space Fang Ren for Wrong Space Fang Ren for Wrong Space',
+                  'Fang Ren for Wrong Space Fang Ren for Wrong Space Fang Ren for Wrong Space Fang Ren for Wrong Space',
+                  'Fang Ren for Wrong Space Fang Ren for Wrong Space Fang Ren for Wrong Space Fang Ren for Wrong Space',
+              ],
+              children:[
+                  {
+                      id:'photo_001',
+                      name:'photo_001',
+                      url:'http://www.aeligo.com/resources/album1_img1.jpg',
+                      parentId:'album_001',
+                  },
+                  {
+                      id:'photo_002',
+                      name:'photo_002',
+                      url:'http://www.aeligo.com/resources/album1_img2.jpg',
+                      parentId:'album_001',
+                  },
+                  {
+                      id:'photo_003',
+                      name:'photo_003',
+                      url:'http://www.aeligo.com/resources/album1_img3.jpg',
+                      parentId:'album_001',
+                  }
+              ]
+          },
+          {
+              id:'album_002',
+              name:'Vietnam',
+              statement:[
+                  'Vietnam Vietnam Vietnam Vietnam1',
+                  'Vietnam Vietnam Vietnam Vietnam2',
+                  'Vietnam Vietnam Vietnam Vietnam3',
+              ],
+              children:[
+                  {
+                      id:'photo_001',
+                      name:'photo_001',
+                      url:'http://www.aeligo.com/resources/album2_img1.jpg',
+                      parentId:'album_002'
+                  },
+                  {
+                      id:'photo_002',
+                      name:'photo_002',
+                      url:'http://www.aeligo.com/resources/album2_img2.jpg',
+                      parentId:'album_002'
+                  },
+                  {
+                      id:'photo_003',
+                      name:'photo_003',
+                      url:'http://www.aeligo.com/resources/album2_img3.jpg',
+                      parentId:'album_002'
+                  },
+                  {
+                      id:'photo_004',
+                      name:'photo_004',
+                      url:'http://www.aeligo.com/resources/album2_img4.jpg',
+                      parentId:'album_002'
+                  },
+                  {
+                      id:'photo_005',
+                      name:'photo_005',
+                      url:'http://www.aeligo.com/resources/album2_img5.jpg',
+                      parentId:'album_002'
+                  },
+              ]
+          },
+          {
+              id:'album_003',
+              name:'Still Life',
+              statement:[
+                  'At the Care Fest, Leigh-Cheri is approached by a beautiful blonde who claims she is from the planet Argon.',
+                  'She informs Leigh-Cheri that redheads are considered evil on her planet and that red hair is caused by "sugar and lust."',
+                  'As it turns out, the Woodpecker has a passion for tequila that inadvertently causes him to bomb a UFO conference instead of his intended target.',
+                  'After the UFO conference is destroyed, a number of people see lights in the sky which seems to prove that the ambassadors from Argon were real.'
+              ],
+              children:[
+                  {
+                      id:'photo_001',
+                      name:'photo_001',
+                      url:'http://www.aeligo.com/resources/album3_img2.jpg',
+                      parentId:'album_003'
+                  },
+                  {
+                      id:'photo_002',
+                      name:'photo_002',
+                      url:'http://www.aeligo.com/resources/album3_img1.jpg',
+                      parentId:'album_003'
+                  },
+                  {
+                      id:'photo_003',
+                      name:'photo_003',
+                      url:'http://www.aeligo.com/resources/album3_img3.jpg',
+                      parentId:'album_003'
+                  },
+                  {
+                      id:'photo_004',
+                      name:'photo_004',
+                      url:'http://www.aeligo.com/resources/album3_img4.jpg',
+                      parentId:'album_003'
+                  }
+              ]
+          },
+          {
+              id:'album_004',
+              name:'Portraits',
+              statement:[
+                  'Portraits Life Portraits Life Portraits Life Portraits Life Portraits Life Portraits Life Portraits Life Portraits',
+                  'Portraits Life Portraits',
+              ],
+              children:[
+                  {
+                      id:'photo_001',
+                      name:'photo_001',
+                      url:'http://www.aeligo.com/resources/album4_img1.jpg',
+                      parentId:'album_004'
+                  },
+                  {
+                      id:'photo_002',
+                      name:'photo_002',
+                      url:'http://www.aeligo.com/resources/album4_img2.jpg',
+                      parentId:'album_004'
+                  },
+                  {
+                      id:'photo_003',
+                      name:'photo_003',
+                      url:'http://www.aeligo.com/resources/album4_img3.jpg',
+                      parentId:'album_004'
+                  },
+                  {
+                      id:'photo_004',
+                      name:'photo_004',
+                      url:'http://www.aeligo.com/resources/album4_img4.jpg',
+                      parentId:'album_004'
+                  },
+                  {
+                      id:'photo_005',
+                      name:'photo_005',
+                      url:'http://www.aeligo.com/resources/album4_img5.jpg',
+                      parentId:'album_004'
+                  },
+              ]
+          },
+          {
+              id:'album_005',
+              name:'LandSpace',
+              statement:[
+                  'LandSpace LandSpace LandSpace LandSpace LandSpace LandSpace',
+              ],
+              children:[
+                  {
+                      id:'photo_001',
+                      name:'photo_001',
+                      url:'http://www.aeligo.com/resources/album5_img1.jpg',
+                      parentId:'album_005'
+                  },
+                  {
+                      id:'photo_002',
+                      name:'photo_002',
+                      url:'http://www.aeligo.com/resources/album5_img2.jpg',
+                      parentId:'album_005'
+                  },
+                  {
+                      id:'photo_003',
+                      name:'photo_003',
+                      url:'http://www.aeligo.com/resources/album5_img3.jpg',
+                      parentId:'album_005'
+                  },
+                  {
+                      id:'photo_004',
+                      name:'photo_004',
+                      url:'http://www.aeligo.com/resources/album5_img4.jpg',
+                      parentId:'album_005'
+                  },
+                
+              ]
+          }
+      ]
+  }
+  </script>
 
-    
-    <!-- 以下是必填项  -->
-    <script>
-      var config = {
-          data:[
-            // {
-            //     id:'album_001',     //每个相册独一无二的id
-            //     name:'Fang Ren for Wrong Space',  //相册名称
-            //     statement:[   //注意书写格式,如需分段
-            //         'paragraph 1',
-            //         'paragraph 2',
-            //         'paragraph 2',
-            //     ],
-            //     children:[ //相册下的每一张图片
-            //         {
-            //             id:'photo_001', //图片独一无二的id
-            //             name:'photo_001', //图片名称
-            //             url:'http://www.aeligo.com/resources/album1_img1.jpg', //图片地址
-            //             parentId:'album_001', //属于哪个相册，填写相册的id
-            //         },
-            //         {
-            //             id:'photo_002',
-            //             name:'photo_002',
-            //             url:'http://www.aeligo.com/resources/album1_img2.jpg',
-            //             parentId:'album_001',
-            //         },
-            //         {
-            //             id:'photo_003',
-            //             name:'photo_003',
-            //             url:'http://www.aeligo.com/resources/album1_img3.jpg',
-            //             parentId:'album_001',
-            //         }
-            //     ]
-            // },
-            {
-                id:'album_001',
-                name:'Home Truly',
-                statement:[
-                    'Home Truly is a series of photographs taken across Australia.',
-                    
-                ],
-                children:[
-                    {
-                        id:'photo_001',
-                        name:'photo_001',
-                        url:'http://www.yingdaxu.com/resource/a1.jpg',
-                        parentId:'album_001',
-                    },
-                    {
-                        id:'photo_004',
-                        name:'photo_004',
-                        url:'http://www.yingdaxu.com/resource/a2.jpg',
-                        parentId:'album_001',
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.yingdaxu.com/resource/a3.jpg',
-                        parentId:'album_001',
-                    },
-                    
-                    {
-                        id:'photo_002',
-                        name:'photo_002',
-                        url:'http://www.yingdaxu.com/resource/a4.jpg',
-                        parentId:'album_001',
-            
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.yingdaxu.com/resource/a5.jpg',
-                        parentId:'album_001',
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.yingdaxu.com/resource/a6.jpg',
-                        parentId:'album_001',
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.yingdaxu.com/resource/a7.jpg',
-                        parentId:'album_001',
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.yingdaxu.com/resource/a8.jpg',
-                        parentId:'album_001',
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.yingdaxu.com/resource/a9.jpg',
-                        parentId:'album_001',
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.yingdaxu.com/resource/a10.jpg',
-                        parentId:'album_001',
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.yingdaxu.com/resource/a11.jpg',
-                        parentId:'album_001',
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.yingdaxu.com/resource/a12.jpg',
-                        parentId:'album_001',
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.yingdaxu.com/resource/a13.jpg',
-                        parentId:'album_001',
-                    },
-                    {
-                        id:'photo_001',
-                        name:'photo_001',
-                        url:'http://images.xhbtr.com/v2/uploads/images/216632/xhbtr_f8107e1d-00e3-4e2f-ba30-b2eb7b48c926_w1600.jpg',
-                        parentId:'album_001',
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.yingdaxu.com/resource/a15.jpg',
-                        parentId:'album_001',
-                    },
-                  
-                ]
-            },
-            {
-                id:'album_003',
-                name:'Pronounce AW18 Backstage',
-                statement:[
-                    'Pronounce AW18 Fashion Week Backstage Reportage, 2018',
-                    
-                    
-                ],
-                children:[
-                    {
-                        id:'photo_001',
-                        name:'photo_001',
-                        url:'http://www.yingdaxu.com/resource/b2.jpg',
-                        parentId:'album_003'
-                    },
-                    {
-                        id:'photo_002',
-                        name:'photo_002',
-                        url:'http://www.aeligo.com/resources/album4_img4.jpg',
-                        parentId:'album_003'
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://images.xhbtr.com/v2/uploads/images/221825/xhbtr_0e5e8439-6dc6-499b-a6ae-9b11c6889e13_w800.jpg',
-                        parentId:'album_003'
-                    },
-                    {
-                        id:'photo_004',
-                        name:'photo_004',
-                        url:'http://images.xhbtr.com/v2/uploads/images/276671/xhbtr_579c8a32-1498-409d-a543-ce754ad75512_w3200.jpg',
-                        parentId:'album_003'
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.yingdaxu.com/resource/b1.jpg',
-                        parentId:'album_003'
-                    },
-                ]
-            },
-       
-            {
-                id:'album_002',
-                name:'Flowers & Other Things',
-                statement:[
-                    'Vietnam Vietnam Vietnam Vietnam1',
-                    'Vietnam Vietnam Vietnam Vietnam2',
-                    'Vietnam Vietnam Vietnam Vietnam3',
-                ],
-                children:[
-                    {
-                        id:'photo_001',
-                        name:'photo_001',
-                        url:'http://www.yingdaxu.com/resource/c1.jpg',
-                        parentId:'album_002'
-                    },
-                    {
-                        id:'photo_002',
-                        name:'photo_002',
-                        url:'http://images.xhbtr.com/v2/uploads/images/275542/xhbtr_21724b45-5260-4323-b7a5-f8aea31329cd_w400.jpg',
-                        parentId:'album_002'
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.aeligo.com/resources/album2_img3.jpg',
-                        parentId:'album_002'
-                    },
-                    {
-                        id:'photo_004',
-                        name:'photo_004',
-                        url:'http://www.aeligo.com/resources/album2_img4.jpg',
-                        parentId:'album_002'
-                    },
-                    {
-                        id:'photo_005',
-                        name:'photo_005',
-                        url:'http://www.aeligo.com/resources/album2_img5.jpg',
-                        parentId:'album_002'
-                    },
-                ]
-            },
-            {
-                id:'album_004',
-                name:'Japan',
-                statement:[
-                    'Portraits Life Portraits Life Portraits Life Portraits Life Portraits Life Portraits Life Portraits Life Portraits',
-                    'Portraits Life Portraits',
-                ],
-                children:[
-                    {
-                        id:'photo_001',
-                        name:'photo_001',
-                        url:'http://www.yingdaxu.com/resource/d1.jpg',
-                        parentId:'album_004'
-                    },
-                    {
-                        id:'photo_002',
-                        name:'photo_002',
-                        url:'http://www.aeligo.com/resources/album4_img2.jpg',
-                        parentId:'album_004'
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.aeligo.com/resources/album4_img3.jpg',
-                        parentId:'album_004'
-                    },
-                    {
-                        id:'photo_004',
-                        name:'photo_004',
-                        url:'http://www.aeligo.com/resources/album4_img4.jpg',
-                        parentId:'album_004'
-                    },
-                    {
-                        id:'photo_005',
-                        name:'photo_005',
-                        url:'http://www.aeligo.com/resources/album4_img5.jpg',
-                        parentId:'album_004'
-                    },
-                ]
-            },
-            
-            {
-                id:'album_005',
-                name:'Portraits',
-                statement:[
-                    'LandSpace LandSpace LandSpace LandSpace LandSpace LandSpace',
-                ],
-                children:[
-                    {
-                        id:'photo_001',
-                        name:'photo_001',
-                        url:'http://images.xhbtr.com/v2/uploads/images/276545/xhbtr_62ca41ae-b92a-499f-b24e-1e3125ec45c7_w800.jpg',
-                        parentId:'album_005'
-                    },
-                    {
-                        id:'photo_002',
-                        name:'photo_002',
-                        url:'http://images.xhbtr.com/v2/uploads/images/276548/xhbtr_060c73d8-51fc-4e82-8ce5-fc1de64db311_w800.jpg',
-                        parentId:'album_005'
-                    },
-                    {
-                        id:'photo_003',
-                        name:'photo_003',
-                        url:'http://www.aeligo.com/resources/album5_img3.jpg',
-                        parentId:'album_005'
-                    },
-                    {
-                        id:'photo_004',
-                        name:'photo_004',
-                        url:'http://www.aeligo.com/resources/album5_img4.jpg',
-                        parentId:'album_005'
-                    },
-                  
-                ]
-            }
-        ]
-    }
-    </script>
-    <!-- <script src="https://cdn.bootcss.com/babel-polyfill/6.26.0/polyfill.min.js"></script>  -->
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>
+<script>!function(l){function e(e){for(var r,t,n=e[0],o=e[1],u=e[2],f=0,i=[];f<n.length;f++)t=n[f],p[t]&&i.push(p[t][0]),p[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(l[r]=o[r]);for(s&&s(e);i.length;)i.shift()();return c.push.apply(c,u||[]),a()}function a(){for(var e,r=0;r<c.length;r++){for(var t=c[r],n=!0,o=1;o<t.length;o++){var u=t[o];0!==p[u]&&(n=!1)}n&&(c.splice(r--,1),e=f(f.s=t[0]))}return e}var t={},p={2:0},c=[];function f(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return l[e].call(r.exports,r,r.exports,f),r.l=!0,r.exports}f.m=l,f.c=t,f.d=function(e,r,t){f.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},f.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},f.t=function(r,e){if(1&e&&(r=f(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(f.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var n in r)f.d(t,n,function(e){return r[e]}.bind(null,n));return t},f.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return f.d(r,"a",r),r},f.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},f.p="/";var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var s=n;a()}([])</script><script src="/static/js/1.a07c0e28.chunk.js"></script><script src="/static/js/main.810d4417.chunk.js"></script></body></html>

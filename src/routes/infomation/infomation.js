@@ -24,7 +24,7 @@ export default class Infomation extends Component {
               <b>Wechat:</b> Shawnxu92
             </p>
             <p>
-              <b>Instagram:</b> whatisthisstyle
+       
             </p>
           </div>
           <div>

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import styles from "./thumbnails.module.less";
+import "react-perfect-scrollbar/dist/css/styles.css";
+import PerfectScrollbar from "react-perfect-scrollbar";
 import { NavLink } from "react-router-dom";
 // import {config} from '../../config/config';
 
@@ -41,14 +43,11 @@ export default class Thumbnails extends Component {
   };
 
   handleScrollUp() {
-    const position = this.wrapperRef.current.scrollTop;
-    if (position === 0) return;
-    this.wrapperRef.current.scrollTo(0, position - STEP);
+    this.wrapperRef.current.scrollTop = -80;
   }
 
   handleScrollDown() {
-    const position = this.wrapperRef.current.scrollTop;
-    this.wrapperRef.current.scrollTo(0, position + STEP);
+    this.wrapperRef.current.scrollTop = 80;
   }
 
   render() {
@@ -69,7 +68,7 @@ export default class Thumbnails extends Component {
 
     return (
       <div className={styles.wrapper}>
-        <div className={styles.wrapper_inside} ref={this.wrapperRef}>
+        <PerfectScrollbar ref={this.wrapperRef} speed={0.8} className={styles.wrapper_inside}>
           <div className={styles.container}>
             {urlList.map((item, index) => {
               return (
@@ -86,10 +85,8 @@ export default class Thumbnails extends Component {
               );
             })}
           </div>
-        </div>
+        </PerfectScrollbar>
       </div>
     );
   }
 }
-
-Thumbnails.propTypes = {};

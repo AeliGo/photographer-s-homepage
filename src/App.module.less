@@ -1,20 +1,20 @@
-.wrapper{
-font-size: 0.7rem;
-position: fixed;
-left:0;
-bottom: 0;
-min-width: 300px;
-width: 100%;
-height: 100%;
-background: #fff;
-  .enterContainer{
+.wrapper {
+  font-size: 0.7rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  min-width: 300px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  .enterContainer {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #fff url('./resource//images/homepage.jpg') no-repeat center;
+    background: #fff url("./resource//images/homepage.jpg") no-repeat center;
     background-size: cover;
   }
-  .navContainer{
+  .navContainer {
     color: #fff;
     position: absolute;
     z-index: 99999;
@@ -22,42 +22,41 @@ background: #fff;
     display: flex;
     justify-content: space-between;
     padding: 30px 30px 0;
-      .darkColor{
-        color:#000;
-        a{
-            color: #000;
-        }
+    .darkColor {
+      color: #000;
+      a {
+        color: #000;
       }
-      .navLeft{
-        letter-spacing: .1em;
-        .indexName{
-            cursor: pointer;
-            display: inline-block;
-        }
-        .navLeftDropdown{
-            display: inline-block;
-            opacity: 0;
-            transition: opacity .8s ease-in-out;
-        }
-        .navLeftDropdown>span{
-            margin-bottom: 5px;
-            padding-left: 15px;
-            cursor: pointer;
-        }
-        .navLeftDropdown>span>a:hover{
-            color: #5f5c5f;
-        }
+    }
+    .navLeft {
+      letter-spacing: 0.1em;
+      .indexName {
+        cursor: pointer;
+        display: inline-block;
       }
-      .navLeft:hover > .navLeftDropdown{
-        opacity: 1;
-        transition: opacity .8s ease-in-out;
+      .navLeftDropdown {
+        display: inline-block;
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
       }
-      .navRight{
-        letter-spacing: .1em;
+      .navLeftDropdown > span {
+        margin-bottom: 5px;
+        padding-left: 15px;
         cursor: pointer;
       }
+      .navLeftDropdown > span > a:hover {
+        color: #5f5c5f;
+      }
+    }
+    .navLeft:hover > .navLeftDropdown {
+      opacity: 1;
+      transition: opacity 0.8s ease-in-out;
+    }
+    .navRight {
+      letter-spacing: 0.1em;
+      cursor: pointer;
+    }
   }
-
 
   .pages {
     position: absolute;
@@ -67,14 +66,14 @@ background: #fff;
 }
 
 @media screen and(max-width:600px) {
-    .wrapper{
-        .navContainer{
-            padding: 13px 21px 5px;
-            .navLeft{
-                .navLeftDropdown{
-                    // padding: 5px 0 0;
-                }
-            }
+  .wrapper {
+    .navContainer {
+      padding: 13px 21px 5px;
+      .navLeft {
+        .navLeftDropdown {
+          // padding: 5px 0 0;
         }
+      }
     }
   }
+}

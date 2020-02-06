@@ -1,81 +1,78 @@
-.container{
-    width: 92%;
-    height: 95%;
-    padding-top: 100px;
-    margin: auto;
-    background-color: #fff;
+.container {
+  width: 92%;
+  height: 95%;
+  padding-top: 100px;
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  .titles {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 220px;
+    min-height: 100px;
+    transform: translate(-50%, -50%);
+    letter-spacing: 0.08em;
+    z-index: 999;
+    p {
+      cursor: pointer;
+      padding: 5px 5px;
+      display: inline-block;
+    }
+    p:hover {
+      color: #ddd;
+    }
+  }
+  .titles:hover ~ div {
+    opacity: 1;
+  }
+  .showPhotoRandom {
+    width: 45%;
+    height: 75%;
     position: relative;
-    .titles{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 220px;
-        min-height: 100px;
-        transform: translate(-50%,-50%);
-        letter-spacing: .08em;
-        z-index: 999;
-        p{
-            cursor: pointer;
-            padding: 5px 5px;
-            display: inline-block;
-        }
-        p:hover{
-            color: #ddd;
-        }
+    box-sizing: border-box;
+    opacity: 0;
+    // transition: opacity 1s ease-in-out;
+    img {
+      max-height: 100%;
+      max-width: 100%;
     }
-    .titles:hover ~ div{
-        opacity: 1;
-    }
-    .showPhotoRandom{
-        width: 45%;
-        height: 75%;
-        position: relative;
-        box-sizing: border-box;
-        opacity: 0;
-        // transition: opacity 1s ease-in-out;
-        img{
-            max-height: 100%;
-            max-width: 100%;
-        }
-    }
+  }
 }
 
-
-.fadeout{
-    opacity: 0 !important;
-    transition: opacity 1s ease-in-out;
+.fadeout {
+  opacity: 0 !important;
+  transition: opacity 1s ease-in-out;
 }
-.fadein{
-    opacity: 1 !important;
-    transition: opacity 1s ease-in-out;
+.fadein {
+  opacity: 1 !important;
+  transition: opacity 1s ease-in-out;
 }
 
-
-
-@media screen and(min-width:600px)and(max-width:1028px) {
-    .container{
-        padding-left: 15%;
-        padding-top: 220px;
-        .titles{
-            margin-right: 4%;
-        }
-        .showPhotoRandom{
-            min-width: 310px;
-        }
+@media screen and(min-width:600px) and(max-width:1028px) {
+  .container {
+    padding-left: 15%;
+    padding-top: 220px;
+    .titles {
+      margin-right: 4%;
     }
+    .showPhotoRandom {
+      min-width: 310px;
+    }
+  }
 }
 @media screen and(max-width:600px) {
-    .container{
-        padding-left: 15%;
-        padding-top: 140px;
-        .titles{
-            width: 69%;
-            p{
-                padding: 10px;
-            }
-        }
-        .showPhotoRandom{
-            display: none;
-        }
+  .container {
+    padding-left: 15%;
+    padding-top: 140px;
+    .titles {
+      width: 69%;
+      p {
+        padding: 10px;
+      }
     }
+    .showPhotoRandom {
+      display: none;
+    }
+  }
 }
